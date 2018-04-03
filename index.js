@@ -39,7 +39,7 @@ bot.onText(/\/Olya/, (msg, match) => {
 
     stat.status(OLYA)
         .then(status => {
-            bot.sendMessage(msg.chat.id, status);
+            bot.sendMessage(msg.chat.id, `Оля, статус вашей заявки\n${status}`);
         })
         .catch(() => {
             bot.sendMessage(msg.chat.id, 'Я не смог получить информацию :( Попробуйте позже');
@@ -57,7 +57,7 @@ bot.onText(/\/Slava/, (msg, match) => {
 
     stat.status(SLAVA)
         .then(status => {
-            bot.sendMessage(msg.chat.id, status);
+            bot.sendMessage(msg.chat.id, `Слава, статус вашей заявки\n${status}`);
         })
         .catch(() => {
             bot.sendMessage(msg.chat.id, 'Я не смог получить информацию :( Попробуйте позже');
