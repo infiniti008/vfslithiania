@@ -28,6 +28,14 @@ if (process.env.PORT) {
 
 console.log('Server started on ' + server);
 
+
+bot.onText(/\/help/, (msg, match) => {
+
+
+    bot.sendMessage(msg.chat.id, `Я помогаю отслеживать статус вашей заявки на получение шенгенской визы. Выберите на клавиатуре ниже, статус какого пасорта вы хотите получить.`);
+
+});
+
 bot.onText(/\/Olya/, (msg, match) => {
 
     const OLYA = {
